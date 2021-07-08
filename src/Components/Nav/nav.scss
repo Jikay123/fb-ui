@@ -1,0 +1,226 @@
+@import '../../global.scss';
+
+.nav {
+    background-color: #fff;
+    padding: 0 10px;
+    display: flex;
+    width: 100%;
+    z-index: 10;
+    margin-top: 0;
+    top: 0;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+
+    box-shadow: 0px 2px 10px rgba(53, 53, 54, 0.2);
+
+    &__left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .logo {
+            width: 100px;
+        }
+
+        .inputSearch_ {
+            border-radius: 10px;
+        }
+
+        .buttonSearch {
+            display: none;
+        }
+
+        @include tablet {
+            .MuiFormControl-root.MuiTextField-root {
+                display: none;
+            }
+
+            .buttonSearch {
+                display: block;
+            }
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+        position: relative;
+
+        .info {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+
+            &__logo {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                margin-right: 10px;
+
+                box-shadow: 0 5px 20px rgba(0, 52, 255, 0.2);
+            }
+        }
+
+        .iconButton {
+            background-color: #e0e0e0;
+            margin: auto 10px;
+            color: #000;
+
+            &:hover {
+                background-color: #cac9c9;
+            }
+        }
+
+        .iconButton.active {
+            .MuiSvgIcon-root {
+                color: blue;
+
+            }
+        }
+
+        @include mobile {
+            .info {
+                display: none;
+            }
+        }
+
+        .droplist {
+            position: absolute;
+            min-height: 300px;
+            min-width: 320px;
+            background-color: #fff;
+            top: 110%;
+            right: 5%;
+            padding: 10px;
+
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 52, 255, 0.2);
+
+
+            .info__drop {
+                text-align: left;
+                border-bottom: 1px solid #ccc;
+                width: 100%;
+                margin: 0 auto;
+
+                .MuiButton-label {
+                    justify-content: flex-start;
+                }
+
+                img.logo {
+                    width: 50px;
+                    height: 50px;
+                    object-fit: cover;
+
+                    border-radius: 50%;
+                    box-shadow: 0 6px 20px rgba(0, 52, 255, 0.2);
+                }
+
+                .text {
+                    margin-left: 10px;
+
+                    h3,
+                    p {
+                        margin: 3px 0px;
+                        line-height: 15px;
+                    }
+                }
+
+
+            }
+
+            .feedback {
+                text-align: left;
+                border-bottom: 1px solid #ccc;
+
+                h4,
+                p {
+                    margin: 2px 0px 2px 15px;
+                    line-height: 15px;
+                }
+
+                .MuiSvgIcon-root {
+                    background-color: rgb(231, 231, 231);
+                    padding: 10px;
+                    border-radius: 50%;
+                }
+
+                p {
+                    font-size: 11px;
+                }
+            }
+
+            .button__control {
+
+                width: 100%;
+
+                .MuiButton-label {
+                    text-align: left;
+                    justify-content: flex-start;
+                }
+
+                .MuiSvgIcon-root {
+                    background-color: rgb(231, 231, 231);
+                    padding: 10px;
+                    border-radius: 50%;
+                }
+
+                h4 {
+                    margin: 3px 0 3px 10px;
+                }
+            }
+        }
+    }
+
+    &__center {
+        .iconButton {
+            padding: 20px;
+
+            &:active {
+                border-bottom: 2px solid rgb(36, 85, 223);
+                border-radius: 1px !important;
+            }
+
+            &:focus {
+                border-bottom: 2px solid rgb(36, 85, 223);
+                border-radius: 1px !important;
+            }
+
+        }
+
+        .iconButton.active {
+            border-bottom: 2px solid rgb(36, 85, 223);
+            border-radius: 1px !important;
+        }
+
+        .iconButton__menu {
+            display: none;
+        }
+
+        @include mobile {
+            .iconButton {
+                display: none;
+            }
+
+        }
+
+        @include tablet {
+            .iconButton__full {
+                display: none;
+            }
+
+            .iconButton__menu {
+                display: inline;
+            }
+        }
+    }
+}
+
+.MuiOutlinedInput-adornedStart {
+    border-radius: 30px !important;
+    background-color: rgb(233, 231, 231);
+    min-width: 320px;
+    max-height: 40px;
+}

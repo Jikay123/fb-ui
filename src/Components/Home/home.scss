@@ -1,0 +1,11 @@
+@import '../../global.scss';
+
+@include tablet {
+    .empty__left {
+        display: none;
+    }
+
+    .empty__right {
+        display: none;
+    }
+}

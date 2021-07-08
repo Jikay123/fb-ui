@@ -1,0 +1,141 @@
+@import '../../global.scss';
+
+.Right__container {
+    position: fixed;
+    overflow: hidden;
+    overflow-x: hidden;
+    max-height: 85vh;
+    right: 0;
+    // margin-right: 10px;
+
+    &:hover {
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 8px;
+            position: absolute;
+        }
+
+        &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 3px rgb(78, 78, 78);
+            border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: rgb(207, 207, 207);
+            border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #8d8c8c;
+        }
+    }
+
+    .button__main {
+        position: relative;
+        min-width: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+
+        &:hover {
+            .button__dot {
+                display: inline-flex;
+            }
+        }
+    }
+
+    .content__top {
+        h3 {
+            margin-top: 0;
+        }
+
+        img.imgMKT {
+            width: 150px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        p {
+            margin-left: 1.5rem;
+        }
+
+
+        .button__dot {
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+
+            display: none;
+
+            .MuiSvgIcon-root {
+                border-radius: 30px !important;
+                height: 30px !important;
+                width: 30px !important;
+
+                path {
+
+                    // font-size: 30px;
+
+                }
+            }
+        }
+    }
+
+    .contact {
+        width: 100%;
+
+        .contact__button {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+
+            img.logo {
+                width: 40px;
+                height: 40px;
+                object-fit: cover;
+                border-radius: 50%;
+
+            }
+
+            p {
+                margin-left: 1.5rem;
+            }
+
+            .dot {
+                width: 8px;
+                height: 8px;
+                background-color: rgb(9, 196, 49);
+                border-radius: 50%;
+                position: absolute;
+                bottom: 30%;
+                left: 12%;
+                border: 1px solid #fff;
+            }
+
+        }
+
+
+    }
+
+    @include tablet {
+        & {
+            right: 0;
+        }
+    }
+
+    @include mobile {
+        & {
+            display: none;
+        }
+    }
+
+}
